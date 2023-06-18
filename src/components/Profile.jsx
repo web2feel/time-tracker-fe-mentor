@@ -2,7 +2,7 @@ import React from "react";
 
 const Profile = ({ time, setTime }) => {
   let interval = ["Daily", "Weekly", "Monthly"];
-  console.log(time);
+
   return (
     <div className="profile">
       <div className="profileInfo">
@@ -19,7 +19,9 @@ const Profile = ({ time, setTime }) => {
             <div
               onClick={() => setTime(item.toLowerCase())}
               key={i}
-              className={`intervalItem ${time === item.toLowerCase() ? "active" : ""}`}
+              className={`intervalItem ${
+                time === item.toLowerCase() ? "active" : ""
+              }`}
             >
               {item}
             </div>
